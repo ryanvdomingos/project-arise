@@ -26,14 +26,29 @@ class RiotDataExtractor:
             if player.get('name') == target_name:
                 stats = player.get('stats', {})
                 
-                # 3. Mapeamento (Instanciando a Entidade Limpa)
+                # 1. Programação Defensiva para Habilidades
+                ability_casts = player.get('ability_casts')
+                c_cast = 0
+                # Só tenta usar o .get() se realmente for um dicionário
+                if isinstance(ability_casts, dict):
+                    c_cast = ability_casts.get('c_cast', 0)
+
+                # 2. Programação Defensiva para Economia
+                economy = player.get('economy')
+                economy_score = 0
+                if isinstance(economy, dict):
+                    spent = economy.get('spent')
+                    if isinstance(spent, dict):
+                        economy_score = spent.get('overall', 0)
+                
+                # 3. Mapeamento Seguro
                 return PlayerPerformance(
                     kills=stats.get('kills', 0),
                     deaths=stats.get('deaths', 0),
                     headshots=stats.get('headshots', 0),
                     bodyshots=stats.get('bodyshots', 0),
-                    ability_casts=player.get('ability_casts', {}).get('c_cast', 0).get('e_cast', 0).get('q_cast', 0), # Exemplo de sub-dicionário
-                    economy_score=player.get('economy', {}).get('spent', {}).get('overall', 0)
+                    ability_casts=c_cast,
+                    economy_score=economy_score
                 )
                 
         raise ValueError(f"Jogador {target_name} não encontrado na partida.")
