@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arise | Analytics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-[#111111] text-gray-100 min-h-screen flex flex-col selection:bg-[#38bdf8] selection:text-black">
+
+    <div class="fixed inset-0 z-0 pointer-events-none">
+        <div class="absolute inset-0 bg-[url('https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt7b92cbddbf65a6e8/6620021b339243ab6aeb11b6/VALORANT_EP8_A3_Wallpaper_16x9.jpg')] bg-cover bg-center opacity-10"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-[#111111]/80 via-[#111111]/95 to-[#111111]"></div>
+    </div>
+
+    <header class="relative z-10 py-5 px-8 flex justify-between items-center w-full">
+        <div class="text-xl font-black tracking-widest text-white">ARISE.</div>
+        <nav class="text-sm font-semibold text-gray-400">
+            <a href="#" class="hover:text-white transition">Início</a>
+        </nav>
+    </header>
+
+    <main class="relative z-10 flex-grow flex flex-col items-center justify-center w-full max-w-4xl mx-auto px-4 -mt-10">
+        
+        <h1 class="text-5xl md:text-6xl font-black tracking-tight mb-2 drop-shadow-lg">
+            <span class="text-[#38bdf8]">ARISE</span> <span class="text-white">ANALYTICS</span>
+        </h1>
+        <p class="text-gray-400 font-semibold tracking-wider mb-10 text-sm md:text-base">PERFORMANCE ANALYTICS</p>
+        
+        <div class="w-full max-w-3xl bg-[#1c1c1f]/80 backdrop-blur-md p-2 rounded-xl border border-gray-700/50 shadow-[0_10px_40px_rgba(0,0,0,0.5)]">
+            <form action="stats.html" class="flex flex-col sm:flex-row gap-2">
+                
+                <div class="hidden sm:flex items-center justify-center bg-[#2a2a2f] px-5 rounded-lg border border-gray-700/50 text-sm font-bold text-gray-400">
+                    BR
+                </div>
+                
+                <input type="text" placeholder="Namorado da Sasa" value="Namorado da Sasa" class="flex-grow px-5 py-4 bg-[#111111] border border-gray-700/50 rounded-lg text-white font-semibold focus:outline-none focus:border-[#ff5b73] transition placeholder-gray-600">
+                
+                <input type="text" placeholder="#TAG" value="#021" class="w-full sm:w-28 px-5 py-4 bg-[#111111] border border-gray-700/50 rounded-lg text-white font-semibold focus:outline-none focus:border-[#ff5b73] transition text-center placeholder-gray-600">
+                
+                <button type="submit" class="w-full sm:w-auto px-10 py-4 bg-[#ff5b73] hover:bg-[#ff405b] text-white font-bold rounded-lg transition shadow-[0_0_15px_rgba(255,91,115,0.3)]">
+                    Entrar
+                </button>
+            </form>
+        </div>
+
+        <div class="mt-12 flex gap-4 text-xs font-semibold text-gray-500">
+            <a href="#" class="hover:text-[#38bdf8] transition flex items-center gap-1">
+                <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Patch 8.11 Live
+            </a>
+            <span>|</span>
+            <a href="#" class="hover:text-white transition">Ver Leaderboards</a>
+        </div>
+        
+    </main>
+
+    <footer class="relative z-10 py-6 text-center text-xs text-gray-600">
+        © 2026 Arise Analytics. Não afiliado à Riot Games.
+    </footer>
+
+</body>
+</html>
